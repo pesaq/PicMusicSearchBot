@@ -20,5 +20,3 @@ def get_settings(path: str):
             admin_id=env.int('ADMIN_ID')
         )
     )
-settings = get_settings('input')
-print(settings)

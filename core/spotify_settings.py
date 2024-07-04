@@ -20,5 +20,3 @@ def get_settings(path: str):
             client_secret=env.str('CLIENT_SECRET')
         )
     )
-clientsettings = get_settings('spotify_input')
-print(clientsettings)

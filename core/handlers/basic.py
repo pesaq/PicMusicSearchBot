@@ -1,10 +1,11 @@
 from aiogram import Router, Bot, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
-from core.settings import settings
+from core.settings import get_settings
 from core.keyboards.help_keyboard import help_board
 
 basicrouter = Router()
+settings = get_settings('.env.example')
 
 @basicrouter.startup()
 async def start_bot(bot: Bot):

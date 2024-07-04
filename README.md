@@ -1,19 +1,29 @@
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="https://service-online.su/text/text-editor/ckeditor-full/contents.css">
-</head>
-<body class="cke_contents_ltr"><p><strong><span style="font-size:28px">Бот для поиска музыки в Spotify API (spotipy)</span></strong></p>
+# Pic Music Search Bot (Telegram)
 
-<p><span style="font-size:18px">Бот дает возможность искать сведения по музыке, вводя название/автора (возможно альбом) трека.</span></p>
+## Описание
+Этот бот для Telegram помогает пользователям находить музыку в Spotify. Используя библиотеку Spotipy, бот может быстро искать треки, альбомы и исполнителей, а также предоставлять ссылки на найденную музыку.
 
-<p>&nbsp;</p>
+## Начало работы
 
-<p><span style="font-size:18px">Чтобы использовать бота, достаточно заполнить файлы конфигурации:</span><br>
-<em><span style="font-size:18px">- config.py</span><br>
-<span style="font-size:18px">- spotify_config.py</span></em></p>
+### Предварительные требования
+- Python 3.6 или выше
+- Установленный pip
+- Аккаунт на Spotify с доступом к API
+- Токен бота Telegram
 
-<p><span style="font-size:18px">Также установить необходимые библиотеки</span><br>
-<span style="font-size:18px">После этого запустить файл main.py</span></p>
+### Настройка
+1. Переименуйте `.env.example` в `.env`.
+2. Заполните следующие поля в файле `.env`:
+CLIENT_ID='ваш_client_id'
+CLIENT_SECRET='ваш_client_secret'
+TOKEN='ваш_telegram_bot_token'
+ADMIN_ID='админ_id_telegram'
 
 
-</body></html>
+## Использование
+Запустите бота через основной файл main.py
+
+После запуска бота вы можете использовать следующие команды в чате Telegram:
+- `/start` - начать работу с ботом
+- `/setcount` - установить количество музыки для поиска
+- `/search <запрос>` - поиск музыки в Spotify

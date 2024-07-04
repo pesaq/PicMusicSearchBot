@@ -1,7 +1,7 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import Command
-from core.spotify_settings import clientsettings
+from core.spotify_settings import get_settings
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
@@ -12,6 +12,9 @@ search_count = 5
 @searchrouter.message(Command(commands=['search']))
 async def search_track(message: Message):
     global search_count
+    
+    clientsettings = get_settings('.env.example')
+
     track_name = message.text.replace('/search', '').strip()
 
     client_credentials_manager = SpotifyClientCredentials(client_id=clientsettings.app.client_id,
